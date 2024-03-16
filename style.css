@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 html, body{
     height: 100%;
     width: 100%;
@@ -7,6 +8,7 @@ html, body{
     }
 
 .container{
+    
   position: relative;
   height: 100%;
   /* background-size: cover; */
@@ -33,13 +35,26 @@ height: 100%;
 
 .nav-bar {
     top: 0;
-    position: relative;
+    position:fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    overflow: hidden;
-  z-index: 3;
+    padding: px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 3;
+    transition: 0.9s;
+  
+  }
+
+  .container .nav-bar .navbar a
+  {
+    font-size: 25px;
+    
+    padding :2rem;
+    
   }
 
   .logo {
@@ -71,7 +86,7 @@ height: 100%;
 
   }
 
-  nav ul li a {
+  .navbar a {
     /* z-index: 1; */
     font-family: 'Italiana', serif;
     text-decoration: none;
@@ -146,7 +161,7 @@ height: 100%;
 
   .card{
     display: flex;
-    border: 1px solid black;
+   
     width: 1120px;
     display: flex;
     flex-direction: row;
@@ -155,13 +170,15 @@ height: 100%;
      left: 120px;
      background: #020F1F;
     color: #fff;
+    margin-bottom: 4rem ;
+    margin-top: 2rem;
 
 
   }
   .box1{
     width: 600px;
     height: 177px;
-    border: 1px solid black;
+   
     text-align: center;
     /* background: #020F1F; */
     color: #fff;
@@ -249,4 +266,131 @@ height: 100%;
   }
   .active.fade-right {
     animation: fade-right 1s ease-in;
+
   } */
+
+  .container .nav-bar .navbar a
+{
+    font-size: 25px;
+    margin: 20px;
+}
+  .container .nav-bar .icons div
+{
+    border:0px solid;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 0.5rem;
+    background:#d5d5d5;
+    color: var(--black);
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+  #menu-btn
+  {
+      display:none
+  }
+
+  .container .nav-bar .navbar.active 
+  {
+      right: 2rem;
+      transition: .4s linear;
+  }
+ #teachers p
+{
+  font-size: 20px ;
+  font-weight: bold;
+}
+
+
+  @media (max-width: 991px)
+  {
+    html
+    {
+        font-size:62.5%;
+
+    }
+
+    .container
+    {
+        padding: 0.5rem;
+    }
+    
+  }
+
+  @media (max-width: 768px)
+  {
+    #menu-btn
+    {
+         display:inline-block;
+         margin: 1rem;
+    }
+        
+    
+  .card{
+    display: flex;
+    flex-direction: column;
+    border: 1px ;
+    width: 80%;
+    display: flex;
+    
+    padding: 0px;
+     gap: 48px;
+   
+     background: #020F1F;
+    color: #fff;
+    margin-bottom: 15rem ;
+    margin-top: 2rem;
+    transition: none;
+
+  }
+  .card .box1
+  {
+    width: 90%;
+    padding: 7 15rem;
+    margin-top:5rem ;
+    margin-bottom: 4rem;
+  }
+  .card .box2
+  {
+    width: 90%;
+    padding: 7 15rem;
+    margin-top:5rem ;
+    margin-bottom: 4rem;
+  }
+
+
+    .container .nav-bar .navbar
+    {
+        position: absolute;
+        top: 110%;
+        right:-110%;
+        width: 17rem;
+        box-shadow:#eee;
+        border-radius:  0.5rem ;
+        background: rgba(0, 0, 0, .5);
+
+    }
+
+
+    .container .nav-bar .navbar a
+    {
+        font-size: 2.5rem;
+        margin: 2.5rem 3rem;
+        display:block;
+    }
+
+    @media (max-width: 450px)
+    {
+        html
+        {
+            font-size:50%;
+        }
+    
+       
+       
+    }
+
+  }
